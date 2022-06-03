@@ -21,7 +21,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1155,1456</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1338,1496</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SHAGetHashCode_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,20 +98,20 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SHAGetHashCode" sap:VirtualizedContainerService.HintSize="552,1391" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SHAGetHashCode" sap:VirtualizedContainerService.HintSize="552,1431" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Getting hash code for &quot;+in_WIID]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  SHA1 online'" sap:VirtualizedContainerService.HintSize="510,1168" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="261faaa6819bbb95070095b4e05902b1" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  SHA1 online'" sap:VirtualizedContainerService.HintSize="510,1208" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="261faaa6819bbb95070095b4e05902b1" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Get hash code" sap:VirtualizedContainerService.HintSize="476,1022" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Get hash code" sap:VirtualizedContainerService.HintSize="476,1062" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -123,10 +123,15 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (283,80,335,22)&quot; +&#xD;&#xA;&quot;Anchor: Text 'SHA1 and other hash functions online generator' (164,34,623,27)&quot;]" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="705163feaca23e5243b2317017af150d" Text="[in_ClientID.ToString+&quot;-&quot;+in_ClientName.ToString+&quot;-&quot;+in_ClientCountry.ToString]" Version="V5">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,759" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (283,80,335,22)&quot; +&#xD;&#xA;&quot;Anchor: Text 'SHA1 and other hash functions online generator' (164,34,623,27)&quot;]" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="705163feaca23e5243b2317017af150d" Text="[in_ClientID.PlainText.ToString+&quot;-&quot;+in_ClientName.PlainText.ToString+&quot;-&quot;+in_ClientCountry.PlainText.ToString]" Version="V5">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
-                        <uc:CvDescriptor Id="92a2127a-7c4b-4299-8d1a-4064550706de">
+                        <uc:CvDescriptor Id="6bee61c8-b4ac-4556-bb17-5d5106778c99">
                           <uc:CvDescriptor.Anchors>
                             <x:Array Type="uc:CvElementDescriptor">
                               <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="164, 34, 623, 27" ElementType="Text" Text="SHA1 and other hash functions online generator" />
