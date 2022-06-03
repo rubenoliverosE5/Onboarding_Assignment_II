@@ -145,13 +145,14 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Image (350,72,264,157)&quot; +&#xD;&#xA;&quot;Anchor: Cell (451,336,121,37)&quot; +&#xD;&#xA;&quot;Anchor: Cell (572,336,131,37)&quot;]" DesignTimeCacheId="866f96d6-0257-42b2-a17e-380c190006aa" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Image" sap:VirtualizedContainerService.HintSize="484,136" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="7b5fb3d260cf211df31eaeebf21d7a46" Result="[WorkItemsExists]" Version="V5">
+                    <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Image (350,72,264,157)&quot; +&#xD;&#xA;&quot;Anchor: Cell (451,336,121,37)&quot; +&#xD;&#xA;&quot;Anchor: Cell (572,336,131,37)&quot; +&#xD;&#xA;&quot;Anchor: Cell (709,336,355,37)&quot;]" DesignTimeCacheId="866f96d6-0257-42b2-a17e-380c190006aa" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Image" sap:VirtualizedContainerService.HintSize="484,136" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="fad4b565564144f071fbaeeec0eef8e8" Result="[WorkItemsExists]" Version="V5">
                       <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
-                        <uc:CvDescriptor Id="ad287d42-e0be-462d-b76e-27a40978373d">
+                        <uc:CvDescriptor Id="195ddaba-5c9f-484e-9b06-c251e7d816c5">
                           <uc:CvDescriptor.Anchors>
                             <x:Array Type="uc:CvElementDescriptor">
                               <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="451, 336, 121, 37" ElementType="Cell" />
                               <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="572, 336, 131, 37" ElementType="Cell" />
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="709, 336, 355, 37" ElementType="Cell" />
                             </x:Array>
                           </uc:CvDescriptor.Anchors>
                           <uc:CvDescriptor.Target>
