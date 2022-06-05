@@ -121,7 +121,7 @@
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="x:Boolean" Name="DasboardExists" />
+                      <Variable x:TypeArguments="x:Boolean" Name="DashboardExists" />
                     </Sequence.Variables>
                     <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (457,295,490,38)&quot; +&#xA;&quot;Anchor: Image (454,228,426,39)&quot;]" DesignTimeCacheId="393df195-8d77-4f87-9278-bad8a2cfa7b9" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="b1e91f0a35e7925ec6d6af83cb5840da" Text="[Username]" Version="V5">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
@@ -207,7 +207,7 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Image (351,80,230,60)&quot; +&#xD;&#xA;&quot;Anchor: Button (449,314,205,48)&quot;]" DesignTimeCacheId="ecc236ce-b5fd-4caf-a5d1-ceb0ad5d3f99" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Image" sap:VirtualizedContainerService.HintSize="484,136" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="e4882d3d8254da3c54a58b004500668a" Result="[DasboardExists]" Version="V5">
+                    <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Image (351,80,230,60)&quot; +&#xA;&quot;Anchor: Button (449,314,205,48)&quot;]" DesignTimeCacheId="ecc236ce-b5fd-4caf-a5d1-ceb0ad5d3f99" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Image" sap:VirtualizedContainerService.HintSize="484,136" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="e4882d3d8254da3c54a58b004500668a" Result="[DashboardExists]" Version="V5">
                       <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="f1abeed5-7446-40b2-b04f-391c88c1f04a">
                           <uc:CvDescriptor.Anchors>
@@ -221,7 +221,7 @@
                         </uc:CvDescriptor>
                       </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                     </p:CvElementExistsWithDescriptor>
-                    <If Condition="[DasboardExists]" sap:VirtualizedContainerService.HintSize="484,318" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[DashboardExists]" sap:VirtualizedContainerService.HintSize="484,318" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <eue:Throw_System_Exception ExtraMessage="{x:Null}" DisplayName="Throw System Exception" sap:VirtualizedContainerService.HintSize="290,132" sap2010:WorkflowViewState.IdRef="Throw_System_Exception_1" MessageCode="Acme Dashboard could not be reached." __Prefix="[IO.Directory.GetCurrentDirectory]" />
                       </If.Then>

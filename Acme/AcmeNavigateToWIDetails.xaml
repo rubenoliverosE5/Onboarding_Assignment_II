@@ -1,26 +1,17 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="AcmeNavigateToWIDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_WIIDURL" Type="InArgument(x:String)" />
-    <x:Property Name="out_ClientID" Type="InArgument(x:String)" />
-    <x:Property Name="out_ClientName" Type="InArgument(x:String)" />
-    <x:Property Name="out_ClientCountry" Type="InArgument(x:String)" />
+    <x:Property Name="out_ClientID" Type="OutArgument(x:String)" />
+    <x:Property Name="out_ClientName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_ClientCountry" Type="OutArgument(x:String)" />
   </x:Members>
   <this:AcmeNavigateToWIDetails.in_WIIDURL>
     <InArgument x:TypeArguments="x:String" />
   </this:AcmeNavigateToWIDetails.in_WIIDURL>
-  <this:AcmeNavigateToWIDetails.out_ClientID>
-    <InArgument x:TypeArguments="x:String" />
-  </this:AcmeNavigateToWIDetails.out_ClientID>
-  <this:AcmeNavigateToWIDetails.out_ClientName>
-    <InArgument x:TypeArguments="x:String" />
-  </this:AcmeNavigateToWIDetails.out_ClientName>
-  <this:AcmeNavigateToWIDetails.out_ClientCountry>
-    <InArgument x:TypeArguments="x:String" />
-  </this:AcmeNavigateToWIDetails.out_ClientCountry>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1338,1567</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1338,1522</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AcmeNavigateToWIDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -86,7 +77,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
@@ -95,29 +85,30 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AcmeNavigateToWIDetails" sap:VirtualizedContainerService.HintSize="552,1502" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AcmeNavigateToWIDetails" sap:VirtualizedContainerService.HintSize="552,1457" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navigating to &quot;+in_WIIDURL.ToString+&quot; details screen&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="510,1279" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="a9fbf0b5df457204eec80ce29d658737" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="510,1234" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="a9fbf0b5df457204eec80ce29d658737" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="476,1133" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap:VirtualizedContainerService.HintSize="476,1088" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_WIIDURL]" />
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="3e63be21-bc3d-4259-8e25-348d599de218" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="434,942" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V5">
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="3e63be21-bc3d-4259-8e25-348d599de218" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="434,857" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V5">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -143,7 +134,7 @@
                         </uc:CvDescriptor>
                       </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                     </p:CvGetTextWithDescriptor>
-                    <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyWordGroup (579,354,84,17)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Client Name:' (489,354,88,15)&quot;]" DesignTimeCacheId="3e63be21-bc3d-4259-8e25-348d599de218" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_3" InformativeScreenshot="d8de9e1145ac5f1c98b9face1d34a39c" RefreshBefore="True" Result="[out_ClientName]" Version="V5">
+                    <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyWordGroup (579,354,84,17)&quot; +&#xA;&quot;Anchor: Text 'Client Name:' (489,354,88,15)&quot;]" DesignTimeCacheId="3e63be21-bc3d-4259-8e25-348d599de218" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_3" InformativeScreenshot="d8de9e1145ac5f1c98b9face1d34a39c" RefreshBefore="True" Result="[out_ClientName]" Version="V5">
                       <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="4e2d0090-8c30-4e55-a9eb-674b47a6fb52">
                           <uc:CvDescriptor.Anchors>
@@ -157,7 +148,7 @@
                         </uc:CvDescriptor>
                       </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                     </p:CvGetTextWithDescriptor>
-                    <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyText (594,374,60,18)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Client Country:' (489,374,103,18)&quot;]" DesignTimeCacheId="3e63be21-bc3d-4259-8e25-348d599de218" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_4" InformativeScreenshot="d50b2988ea535b980c7faca80df4eed7" RefreshBefore="True" Result="[out_ClientCountry]" Version="V5">
+                    <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyText (594,374,60,18)&quot; +&#xA;&quot;Anchor: Text 'Client Country:' (489,374,103,18)&quot;]" DesignTimeCacheId="3e63be21-bc3d-4259-8e25-348d599de218" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_4" InformativeScreenshot="d50b2988ea535b980c7faca80df4eed7" RefreshBefore="True" Result="[out_ClientCountry]" Version="V5">
                       <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="40b3acd8-287e-4759-ad52-763e597e2a68">
                           <uc:CvDescriptor.Anchors>
@@ -174,6 +165,9 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>

@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1155,2007</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1155,2640</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AcmeUpdateWorkItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -91,209 +91,218 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AcmeUpdateWorkItem" sap:VirtualizedContainerService.HintSize="552,1942" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AcmeUpdateWorkItem" sap:VirtualizedContainerService.HintSize="552,2575" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Updating work item&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="510,1588" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="614bbd981021381f362c739b4f4d6abf" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="510,593" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="614bbd981021381f362c739b4f4d6abf" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="476,1442" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="0058466b-915a-46b9-bb6e-039738df3f9f" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="434,447" sap2010:WorkflowViewState.IdRef="CVScope_5" Version="V5">
+            <p:CVScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Update Work Item' (924,450,115,18)&quot; +&#xA;&quot;Anchor: Icon (903,449,20,19)&quot;]" DesignTimeCacheId="0058466b-915a-46b9-bb6e-039738df3f9f" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="241b40cf67dab5f765c7e56de8ddc225" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+                    <p:CvClickWithDescriptor.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </p:CvClickWithDescriptor.CursorPosition>
+                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="66368e31-5ac1-45f2-b066-a13224764fed">
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="903, 449, 20, 19" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEESURBVDhPzdStDoMwFIbh3VNVFfeAm8JNoeZQKNzUbgCFm6qqQ9WhUHOoKlwV7ltPgDHGzyib2JuQENI+OU0TDvhx/wQ2MKbp3of2gU2FW8jBGIOfKNTdZ2oHaKDiFuufV9QNtJNJeYfREmdvABnjuJbtku3g85gcQfqG+gmUaZdtAzvMjyVKGY3RIEauu3W2z+ATy6G1QMiHYwZZZe963Dq4iNExx5P1LYM7MGoe7C8gFE4YNQPWkITRZu7Bc8CoKWgnOl0K69rJemgjRk3B4oKTsDsbjbLIcHbAqAlY3Y72qCFSpSCyCIEDRk3AOk8QJVdkQqG4a8z8UFabuZTv+jEIPAC6a1hN57UWnAAAAABJRU5ErkJggg==" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="924, 450, 115, 18" ElementType="Text" Text="Update Work Item" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                    <p:CvClickWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d452560b-8469-4d5c-8f31-974a9adbe358">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvClickWithDescriptor.Target>
+                  </p:CvClickWithDescriptor>
+                </Sequence>
+              </ActivityAction>
+            </p:CVScope.Body>
+            <p:CVScope.DesignTimeCache>
+              <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+            </p:CVScope.DesignTimeCache>
+            <p:CVScope.DesignTimeCacheContainer>
+              <uc:CvCacheContainer>
+                <uc:CvCacheContainer.Caches>
+                  <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                    <uc:CVCache DisplayName="Update Item Screen" Id="0058466b-915a-46b9-bb6e-039738df3f9f" InformativeScreenshot="1f16bd31e77c4ed206bb0f6468418f26" LogicalPosition="0, 71" OcrText="ACME System 1 Home Switch to new theme Log Out Work Items - Work Item Details Home / Work Items / Work Item Details Calculate Client Security Hash Client Information Details Work Item Details Client ID: KI44163 WIID: 82792749 Client Name: Edison Byam Type: Calculate Client Security Hash Client Country: Germany Status: Open Date: 2017-02-28 Update Work Item Copyright © 2022 ACME Systems" Position="0, 71">
+                      <uc:CVCache.CvAnchorRelations>
+                        <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                      </uc:CVCache.CvAnchorRelations>
+                      <uc:CVCache.CvUiElements>
+                        <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
+                          <uc:CvElementInfo Category="Icon" Region="903, 449, 20, 19" />
+                          <uc:CvElementInfo Category="Button" Region="893, 441, 159, 37" />
+                          <uc:CvElementInfo Category="InputBox" Region="398, 159, 1125, 37" />
+                          <uc:CvElementInfo Category="Cell" Region="446, 505, 1039, 69" />
+                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="327, 77, 1177, 62" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="509, 15, 14, 19" />
+                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="459, 269, 494, 233" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="508, 14, 16, 22" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="904, 449, 22, 22" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="463, 329, 442, 22" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="430, 194, 1030, 41" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="460, 287, 441, 42" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="16, 16, 430, 584" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="564, 234, 874, 42" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="478, 371, 400, 23" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="359, 55, 884, 90" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="536, 235, 344, 42" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="461, 351, 435, 23" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="451, 362, 443, 43" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="374, 138, 1151, 21" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1425, 11, 495, 719" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="465, 279, 428, 226" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="461, 393, 416, 25" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="447, 419, 436, 20" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="507, 276, 378, 25" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="110, 12, 249, 38" />
+                        </scg:List>
+                      </uc:CVCache.CvUiElements>
+                      <uc:CVCache.OcrTexts>
+                        <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
+                          <uc:OcrTextInfo Region="387, 16, 56, 17" Text="ACME" />
+                          <uc:OcrTextInfo Region="444, 16, 63, 20" Text="System" />
+                          <uc:OcrTextInfo Region="511, 16, 9, 16" Text="1" />
+                          <uc:OcrTextInfo Region="1252, 17, 39, 14" Text="Home" />
+                          <uc:OcrTextInfo Region="1318, 17, 45, 14" Text="Switch" />
+                          <uc:OcrTextInfo Region="1363, 17, 15, 14" Text="to" />
+                          <uc:OcrTextInfo Region="1380, 19, 28, 12" Text="new" />
+                          <uc:OcrTextInfo Region="1409, 17, 42, 14" Text="theme" />
+                          <uc:OcrTextInfo Region="1478, 17, 26, 16" Text="Log" />
+                          <uc:OcrTextInfo Region="1505, 17, 26, 14" Text="Out" />
+                          <uc:OcrTextInfo Region="388, 92, 86, 32" Text="Work" />
+                          <uc:OcrTextInfo Region="482, 92, 90, 33" Text="Items" />
+                          <uc:OcrTextInfo Region="579, 97, 15, 26" Text="-" />
+                          <uc:OcrTextInfo Region="600, 92, 89, 32" Text="Work" />
+                          <uc:OcrTextInfo Region="696, 92, 72, 32" Text="Item" />
+                          <uc:OcrTextInfo Region="775, 92, 113, 32" Text="Details" />
+                          <uc:OcrTextInfo Region="403, 170, 40, 15" Text="Home" />
+                          <uc:OcrTextInfo Region="449, 170, 7, 13" Text="/" />
+                          <uc:OcrTextInfo Region="462, 169, 36, 15" Text="Work" />
+                          <uc:OcrTextInfo Region="498, 169, 37, 15" Text="Items" />
+                          <uc:OcrTextInfo Region="540, 171, 8, 13" Text="/" />
+                          <uc:OcrTextInfo Region="554, 170, 37, 14" Text="Work" />
+                          <uc:OcrTextInfo Region="590, 170, 31, 15" Text="Item" />
+                          <uc:OcrTextInfo Region="622, 169, 45, 15" Text="Details" />
+                          <uc:OcrTextInfo Region="475, 249, 60, 15" Text="Calculate" />
+                          <uc:OcrTextInfo Region="537, 249, 39, 15" Text="Client" />
+                          <uc:OcrTextInfo Region="576, 249, 53, 17" Text="Security" />
+                          <uc:OcrTextInfo Region="631, 249, 35, 15" Text="Hash" />
+                          <uc:OcrTextInfo Region="489, 302, 49, 17" Text="Client" />
+                          <uc:OcrTextInfo Region="541, 302, 91, 16" Text="Information" />
+                          <uc:OcrTextInfo Region="635, 302, 58, 17" Text="Details" />
+                          <uc:OcrTextInfo Region="892, 302, 45, 17" Text="Work" />
+                          <uc:OcrTextInfo Region="940, 302, 36, 17" Text="Item" />
+                          <uc:OcrTextInfo Region="979, 302, 58, 17" Text="Details" />
+                          <uc:OcrTextInfo Region="489, 334, 42, 14" Text="Client" />
+                          <uc:OcrTextInfo Region="532, 334, 21, 14" Text="ID:" />
+                          <uc:OcrTextInfo Region="555, 334, 54, 14" Text="KI44163" />
+                          <uc:OcrTextInfo Region="891, 334, 40, 15" Text="WIID:" />
+                          <uc:OcrTextInfo Region="932, 334, 65, 15" Text="82792749" />
+                          <uc:OcrTextInfo Region="489, 354, 43, 15" Text="Client" />
+                          <uc:OcrTextInfo Region="532, 355, 45, 14" Text="Name:" />
+                          <uc:OcrTextInfo Region="579, 354, 44, 15" Text="Edison" />
+                          <uc:OcrTextInfo Region="626, 354, 37, 17" Text="Byam" />
+                          <uc:OcrTextInfo Region="893, 354, 38, 17" Text="Type:" />
+                          <uc:OcrTextInfo Region="932, 354, 62, 14" Text="Calculate" />
+                          <uc:OcrTextInfo Region="995, 354, 39, 15" Text="Client" />
+                          <uc:OcrTextInfo Region="1035, 354, 53, 17" Text="Security" />
+                          <uc:OcrTextInfo Region="1089, 354, 35, 14" Text="Hash" />
+                          <uc:OcrTextInfo Region="489, 374, 43, 15" Text="Client" />
+                          <uc:OcrTextInfo Region="532, 374, 60, 18" Text="Country:" />
+                          <uc:OcrTextInfo Region="594, 374, 60, 18" Text="Germany" />
+                          <uc:OcrTextInfo Region="893, 374, 49, 15" Text="Status:" />
+                          <uc:OcrTextInfo Region="944, 374, 36, 17" Text="Open" />
+                          <uc:OcrTextInfo Region="892, 395, 38, 13" Text="Date:" />
+                          <uc:OcrTextInfo Region="931, 394, 74, 14" Text="2017-02-28" />
+                          <uc:OcrTextInfo Region="924, 450, 46, 18" Text="Update" />
+                          <uc:OcrTextInfo Region="972, 451, 36, 14" Text="Work" />
+                          <uc:OcrTextInfo Region="1009, 451, 30, 14" Text="Item" />
+                          <uc:OcrTextInfo Region="458, 595, 63, 17" Text="Copyright" />
+                          <uc:OcrTextInfo Region="522, 596, 13, 13" Text="©" />
+                          <uc:OcrTextInfo Region="536, 596, 33, 13" Text="2022" />
+                          <uc:OcrTextInfo Region="570, 595, 43, 14" Text="ACME" />
+                          <uc:OcrTextInfo Region="615, 595, 56, 17" Text="Systems" />
+                        </scg:List>
+                      </uc:CVCache.OcrTexts>
+                    </uc:CVCache>
+                  </scg:List>
+                </uc:CvCacheContainer.Caches>
+              </uc:CvCacheContainer>
+            </p:CVScope.DesignTimeCacheContainer>
+            <p:CVScope.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+                <p1:UiPathScreenOCR ApiKey="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" Endpoint="https://cv-2021-06-uatautomation.services.e5.ai/" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_3" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+              </ActivityFunc>
+            </p:CVScope.OCREngine>
+            <p:CVScope.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2efa130d-e518-42f9-952d-cbaebf3705ec" InformativeScreenshot="858fd4e458b523ebc591f738339807f7" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </p:CVScope.Target>
+            <p:CVScope.UseLocalServer>
+              <InArgument x:TypeArguments="x:Boolean" />
+            </p:CVScope.UseLocalServer>
+          </p:CVScope>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="510,1588" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="8781e073820bb2cdba2b6919184a3bea" Selector="&lt;html app='chrome.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="476,1442" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="0058466b-915a-46b9-bb6e-039738df3f9f" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="434,447" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V5">
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="434,863" sap2010:WorkflowViewState.IdRef="CVScope_6" Version="V5">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Update Work Item' (924,450,115,18)&quot; +&#xA;&quot;Anchor: Icon (903,449,20,19)&quot;]" DesignTimeCacheId="0058466b-915a-46b9-bb6e-039738df3f9f" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="241b40cf67dab5f765c7e56de8ddc225" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
-                      <p:CvClickWithDescriptor.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </p:CvClickWithDescriptor.CursorPosition>
-                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
-                        <uc:CvDescriptor Id="66368e31-5ac1-45f2-b066-a13224764fed">
-                          <uc:CvDescriptor.Anchors>
-                            <x:Array Type="uc:CvElementDescriptor">
-                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="903, 449, 20, 19" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEESURBVDhPzdStDoMwFIbh3VNVFfeAm8JNoeZQKNzUbgCFm6qqQ9WhUHOoKlwV7ltPgDHGzyib2JuQENI+OU0TDvhx/wQ2MKbp3of2gU2FW8jBGIOfKNTdZ2oHaKDiFuufV9QNtJNJeYfREmdvABnjuJbtku3g85gcQfqG+gmUaZdtAzvMjyVKGY3RIEauu3W2z+ATy6G1QMiHYwZZZe963Dq4iNExx5P1LYM7MGoe7C8gFE4YNQPWkITRZu7Bc8CoKWgnOl0K69rJemgjRk3B4oKTsDsbjbLIcHbAqAlY3Y72qCFSpSCyCIEDRk3AOk8QJVdkQqG4a8z8UFabuZTv+jEIPAC6a1hN57UWnAAAAABJRU5ErkJggg==" />
-                            </x:Array>
-                          </uc:CvDescriptor.Anchors>
-                          <uc:CvDescriptor.Target>
-                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="924, 450, 115, 18" ElementType="Text" Text="Update Work Item" />
-                          </uc:CvDescriptor.Target>
-                        </uc:CvDescriptor>
-                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
-                      <p:CvClickWithDescriptor.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d452560b-8469-4d5c-8f31-974a9adbe358">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </p:CvClickWithDescriptor.Target>
-                    </p:CvClickWithDescriptor>
-                  </Sequence>
-                </ActivityAction>
-              </p:CVScope.Body>
-              <p:CVScope.DesignTimeCache>
-                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
-              </p:CVScope.DesignTimeCache>
-              <p:CVScope.DesignTimeCacheContainer>
-                <uc:CvCacheContainer>
-                  <uc:CvCacheContainer.Caches>
-                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-                      <uc:CVCache DisplayName="Update Item Screen" Id="0058466b-915a-46b9-bb6e-039738df3f9f" InformativeScreenshot="1f16bd31e77c4ed206bb0f6468418f26" LogicalPosition="0, 71" OcrText="ACME System 1 Home Switch to new theme Log Out Work Items - Work Item Details Home / Work Items / Work Item Details Calculate Client Security Hash Client Information Details Work Item Details Client ID: KI44163 WIID: 82792749 Client Name: Edison Byam Type: Calculate Client Security Hash Client Country: Germany Status: Open Date: 2017-02-28 Update Work Item Copyright © 2022 ACME Systems" Position="0, 71">
-                        <uc:CVCache.CvAnchorRelations>
-                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
-                        </uc:CVCache.CvAnchorRelations>
-                        <uc:CVCache.CvUiElements>
-                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
-                            <uc:CvElementInfo Category="Icon" Region="903, 449, 20, 19" />
-                            <uc:CvElementInfo Category="Button" Region="893, 441, 159, 37" />
-                            <uc:CvElementInfo Category="InputBox" Region="398, 159, 1125, 37" />
-                            <uc:CvElementInfo Category="Cell" Region="446, 505, 1039, 69" />
-                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="327, 77, 1177, 62" />
-                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="509, 15, 14, 19" />
-                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="459, 269, 494, 233" />
-                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="508, 14, 16, 22" />
-                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="904, 449, 22, 22" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="463, 329, 442, 22" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="430, 194, 1030, 41" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="460, 287, 441, 42" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="16, 16, 430, 584" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="564, 234, 874, 42" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="478, 371, 400, 23" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="359, 55, 884, 90" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="536, 235, 344, 42" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="461, 351, 435, 23" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="451, 362, 443, 43" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="374, 138, 1151, 21" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1425, 11, 495, 719" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="465, 279, 428, 226" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="461, 393, 416, 25" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="447, 419, 436, 20" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="507, 276, 378, 25" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="110, 12, 249, 38" />
-                          </scg:List>
-                        </uc:CVCache.CvUiElements>
-                        <uc:CVCache.OcrTexts>
-                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
-                            <uc:OcrTextInfo Region="387, 16, 56, 17" Text="ACME" />
-                            <uc:OcrTextInfo Region="444, 16, 63, 20" Text="System" />
-                            <uc:OcrTextInfo Region="511, 16, 9, 16" Text="1" />
-                            <uc:OcrTextInfo Region="1252, 17, 39, 14" Text="Home" />
-                            <uc:OcrTextInfo Region="1318, 17, 45, 14" Text="Switch" />
-                            <uc:OcrTextInfo Region="1363, 17, 15, 14" Text="to" />
-                            <uc:OcrTextInfo Region="1380, 19, 28, 12" Text="new" />
-                            <uc:OcrTextInfo Region="1409, 17, 42, 14" Text="theme" />
-                            <uc:OcrTextInfo Region="1478, 17, 26, 16" Text="Log" />
-                            <uc:OcrTextInfo Region="1505, 17, 26, 14" Text="Out" />
-                            <uc:OcrTextInfo Region="388, 92, 86, 32" Text="Work" />
-                            <uc:OcrTextInfo Region="482, 92, 90, 33" Text="Items" />
-                            <uc:OcrTextInfo Region="579, 97, 15, 26" Text="-" />
-                            <uc:OcrTextInfo Region="600, 92, 89, 32" Text="Work" />
-                            <uc:OcrTextInfo Region="696, 92, 72, 32" Text="Item" />
-                            <uc:OcrTextInfo Region="775, 92, 113, 32" Text="Details" />
-                            <uc:OcrTextInfo Region="403, 170, 40, 15" Text="Home" />
-                            <uc:OcrTextInfo Region="449, 170, 7, 13" Text="/" />
-                            <uc:OcrTextInfo Region="462, 169, 36, 15" Text="Work" />
-                            <uc:OcrTextInfo Region="498, 169, 37, 15" Text="Items" />
-                            <uc:OcrTextInfo Region="540, 171, 8, 13" Text="/" />
-                            <uc:OcrTextInfo Region="554, 170, 37, 14" Text="Work" />
-                            <uc:OcrTextInfo Region="590, 170, 31, 15" Text="Item" />
-                            <uc:OcrTextInfo Region="622, 169, 45, 15" Text="Details" />
-                            <uc:OcrTextInfo Region="475, 249, 60, 15" Text="Calculate" />
-                            <uc:OcrTextInfo Region="537, 249, 39, 15" Text="Client" />
-                            <uc:OcrTextInfo Region="576, 249, 53, 17" Text="Security" />
-                            <uc:OcrTextInfo Region="631, 249, 35, 15" Text="Hash" />
-                            <uc:OcrTextInfo Region="489, 302, 49, 17" Text="Client" />
-                            <uc:OcrTextInfo Region="541, 302, 91, 16" Text="Information" />
-                            <uc:OcrTextInfo Region="635, 302, 58, 17" Text="Details" />
-                            <uc:OcrTextInfo Region="892, 302, 45, 17" Text="Work" />
-                            <uc:OcrTextInfo Region="940, 302, 36, 17" Text="Item" />
-                            <uc:OcrTextInfo Region="979, 302, 58, 17" Text="Details" />
-                            <uc:OcrTextInfo Region="489, 334, 42, 14" Text="Client" />
-                            <uc:OcrTextInfo Region="532, 334, 21, 14" Text="ID:" />
-                            <uc:OcrTextInfo Region="555, 334, 54, 14" Text="KI44163" />
-                            <uc:OcrTextInfo Region="891, 334, 40, 15" Text="WIID:" />
-                            <uc:OcrTextInfo Region="932, 334, 65, 15" Text="82792749" />
-                            <uc:OcrTextInfo Region="489, 354, 43, 15" Text="Client" />
-                            <uc:OcrTextInfo Region="532, 355, 45, 14" Text="Name:" />
-                            <uc:OcrTextInfo Region="579, 354, 44, 15" Text="Edison" />
-                            <uc:OcrTextInfo Region="626, 354, 37, 17" Text="Byam" />
-                            <uc:OcrTextInfo Region="893, 354, 38, 17" Text="Type:" />
-                            <uc:OcrTextInfo Region="932, 354, 62, 14" Text="Calculate" />
-                            <uc:OcrTextInfo Region="995, 354, 39, 15" Text="Client" />
-                            <uc:OcrTextInfo Region="1035, 354, 53, 17" Text="Security" />
-                            <uc:OcrTextInfo Region="1089, 354, 35, 14" Text="Hash" />
-                            <uc:OcrTextInfo Region="489, 374, 43, 15" Text="Client" />
-                            <uc:OcrTextInfo Region="532, 374, 60, 18" Text="Country:" />
-                            <uc:OcrTextInfo Region="594, 374, 60, 18" Text="Germany" />
-                            <uc:OcrTextInfo Region="893, 374, 49, 15" Text="Status:" />
-                            <uc:OcrTextInfo Region="944, 374, 36, 17" Text="Open" />
-                            <uc:OcrTextInfo Region="892, 395, 38, 13" Text="Date:" />
-                            <uc:OcrTextInfo Region="931, 394, 74, 14" Text="2017-02-28" />
-                            <uc:OcrTextInfo Region="924, 450, 46, 18" Text="Update" />
-                            <uc:OcrTextInfo Region="972, 451, 36, 14" Text="Work" />
-                            <uc:OcrTextInfo Region="1009, 451, 30, 14" Text="Item" />
-                            <uc:OcrTextInfo Region="458, 595, 63, 17" Text="Copyright" />
-                            <uc:OcrTextInfo Region="522, 596, 13, 13" Text="©" />
-                            <uc:OcrTextInfo Region="536, 596, 33, 13" Text="2022" />
-                            <uc:OcrTextInfo Region="570, 595, 43, 14" Text="ACME" />
-                            <uc:OcrTextInfo Region="615, 595, 56, 17" Text="Systems" />
-                          </scg:List>
-                        </uc:CVCache.OcrTexts>
-                      </uc:CVCache>
-                    </scg:List>
-                  </uc:CvCacheContainer.Caches>
-                </uc:CvCacheContainer>
-              </p:CVScope.DesignTimeCacheContainer>
-              <p:CVScope.OCREngine>
-                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
-                  <ActivityFunc.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-                  </ActivityFunc.Argument>
-                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" Endpoint="https://cv-2021-06-uatautomation.services.e5.ai/" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
-                </ActivityFunc>
-              </p:CVScope.OCREngine>
-              <p:CVScope.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2efa130d-e518-42f9-952d-cbaebf3705ec" InformativeScreenshot="858fd4e458b523ebc591f738339807f7" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="INTERACTIVE">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                </ui:Target>
-              </p:CVScope.Target>
-              <p:CVScope.UseLocalServer>
-                <InArgument x:TypeArguments="x:Boolean" />
-              </p:CVScope.UseLocalServer>
-            </p:CVScope>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="434,863" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V5">
-              <p:CVScope.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (46,281,340,56)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Add Comments:' (43,259,111,14)&quot;]" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="c5b5ac5825450f26208773ad583fcb53" Text="[in_SecurityHash]" Version="V5">
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (46,281,340,56)&quot; +&#xA;&quot;Anchor: Text 'Add Comments:' (43,259,111,14)&quot;]" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="c5b5ac5825450f26208773ad583fcb53" Text="[in_SecurityHash]" Version="V5">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="edf2528d-78d0-4643-84e4-302b969c48b4">
                           <uc:CvDescriptor.Anchors>
@@ -317,7 +326,7 @@
                         </ui:Target>
                       </p:CvTypeIntoWithDescriptor.Target>
                     </p:CvTypeIntoWithDescriptor>
-                    <p:CvSelectItemWithDescriptor DeselectAfter="{x:Null}" InRegion="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (43,375,223,36)&quot; +&#xD;&#xA;&quot;Anchor: Text 'New Status:' (44,353,82,14)&quot;]" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DesignTimeScaleFactor="1" DisplayName="CV Dropdown Select - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvSelectItemWithDescriptor_1" InformativeScreenshot="d6ecb34dadb4a64fa45edc0702add5c1" Text="[&quot;Completed&quot;]" Version="V5">
+                    <p:CvSelectItemWithDescriptor DeselectAfter="{x:Null}" InRegion="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (43,375,223,36)&quot; +&#xA;&quot;Anchor: Text 'New Status:' (44,353,82,14)&quot;]" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DesignTimeScaleFactor="1" DisplayName="CV Dropdown Select - InputBox" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvSelectItemWithDescriptor_3" InformativeScreenshot="d6ecb34dadb4a64fa45edc0702add5c1" Text="[&quot;C&quot;]" Version="V5">
                       <p:CvSelectItemWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="fddf2ace-ed09-45a4-91a0-15f8c9010456">
                           <uc:CvDescriptor.Anchors>
@@ -341,7 +350,7 @@
                         </ui:Target>
                       </p:CvSelectItemWithDescriptor.Target>
                     </p:CvSelectItemWithDescriptor>
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Update Work Item' (75,433,116,18)&quot; +&#xD;&#xA;&quot;Anchor: Button (45,424,158,36)&quot;]" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="50a896cd77ffbfe887ec2a7c574a814c" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Update Work Item' (75,433,116,18)&quot; +&#xA;&quot;Anchor: Button (45,424,158,36)&quot;]" DesignTimeCacheId="79c8c962-80b3-4128-ad04-da7ced281e34" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="50a896cd77ffbfe887ec2a7c574a814c" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -378,11 +387,14 @@
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
                     <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-                      <uc:CVCache DisplayName="Screen CV Type Into - 'Add Com (Main)" Id="79c8c962-80b3-4128-ad04-da7ced281e34" InformativeScreenshot="f92065cc2653e68dd3e7e6bc961b946f" LogicalPosition="0, 71" OcrText="Update Work Item Update Work Item WIID: 82792749 Type: Calculate Client Security Hash Status: Open Date: 2017-02-28 Comments: Add Comments: New Status: Update Work Item Copyright © 2022 ACME Systems" Position="0, 71">
+                      <uc:CVCache DisplayName="Update Work Item Pop Up" Id="79c8c962-80b3-4128-ad04-da7ced281e34" InformativeScreenshot="f92065cc2653e68dd3e7e6bc961b946f" LogicalPosition="8, 60" OcrText="Update Work Item Update Work Item WIID: 82792749 Type: Calculate Client Security Hash Status: Open Date: 2017-02-28 Comments: Add Comments: New Status: Update Work Item Copyright © 2022 ACME Systems" Position="8, 60">
                         <uc:CVCache.CvAnchorRelations>
                           <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
                             <uc:AnchorRelationInfo Target="1">
@@ -484,11 +496,165 @@
                   <ActivityFunc.Argument>
                     <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
                   </ActivityFunc.Argument>
-                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" Endpoint="https://cv-2021-06-uatautomation.services.e5.ai/" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" Endpoint="https://cv-2021-06-uatautomation.services.e5.ai/" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_4" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
                 </ActivityFunc>
               </p:CVScope.OCREngine>
               <p:CVScope.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d027fece-ccfb-4f34-997a-a3b0c8aab02d" InformativeScreenshot="7cf3fd3e75b15194ae0857ed2c124158" Selector="&lt;webctrl tag='BODY' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2c98d80a-d6ff-4e1f-9172-76b0bff30442" DisplayName="CV Screen Scope 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="434,447" sap2010:WorkflowViewState.IdRef="CVScope_7" Version="V5">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'OK' (396,86,20,14)&quot; +&#xD;&#xA;&quot;Anchor: Button (374,77,66,33)&quot;]" DesignTimeCacheId="2c98d80a-d6ff-4e1f-9172-76b0bff30442" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_7" InformativeScreenshot="c2733188f82754b6bdab56aacc8c0e6a" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+                      <p:CvClickWithDescriptor.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </p:CvClickWithDescriptor.CursorPosition>
+                      <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor Id="028baf3b-b130-4790-bf11-a909c47c6500">
+                          <uc:CvDescriptor.Anchors>
+                            <x:Array Type="uc:CvElementDescriptor">
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="374, 77, 66, 33" ElementType="Button" />
+                            </x:Array>
+                          </uc:CvDescriptor.Anchors>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="396, 86, 20, 14" ElementType="Text" Text="OK" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <p:CvClickWithDescriptor.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="4a53238b-792f-4139-ac81-8bebb8b3c52e">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </p:CvClickWithDescriptor.Target>
+                    </p:CvClickWithDescriptor>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DisplayName="Screen CV Click - 'OK' (Main)" Id="2c98d80a-d6ff-4e1f-9172-76b0bff30442" InformativeScreenshot="1e442b7cd6622e0c0bc3b6346b1c1e91" LogicalPosition="8, 60" OcrText="acme-test.uipath.com says Work Item was updated accordingly OK epuere WIID: 83830208 Type: Calculate Client Security Hash Status: Open Date: 2020-08-18 Comments: I86e038d31426c17784799b602bbc18b202efa8d Add Comments: 86e038d31426c17784799b602bbc18b202efa8d New Status: Completed Update Work Item Convrinht ( 9092 ACME Svetamc" Position="8, 60">
+                        <uc:CVCache.CvAnchorRelations>
+                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                            <uc:AnchorRelationInfo Target="3">
+                              <uc:AnchorRelationInfo.Anchors>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>22</x:Int32>
+                                  <x:Int32>23</x:Int32>
+                                </x:Array>
+                              </uc:AnchorRelationInfo.Anchors>
+                            </uc:AnchorRelationInfo>
+                            <uc:AnchorRelationInfo Target="15">
+                              <uc:AnchorRelationInfo.Anchors>
+                                <x:Array Type="x:Int32">
+                                  <x:Int32>25</x:Int32>
+                                  <x:Int32>26</x:Int32>
+                                </x:Array>
+                              </uc:AnchorRelationInfo.Anchors>
+                            </uc:AnchorRelationInfo>
+                          </scg:List>
+                        </uc:CVCache.CvAnchorRelations>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
+                            <uc:CvElementInfo Category="Button" Region="374, 77, 66, 33" />
+                            <uc:CvElementInfo Category="Button" Region="46, 445, 156, 33" />
+                            <uc:CvElementInfo Category="Icon" Region="56, 453, 19, 18" />
+                            <uc:CvElementInfo Category="InputBox" Region="47, 301, 337, 54" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="432, 581, 18, 18" />
+                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="12, 531, 412, 35" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="44, 122, 15, 15" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="443, 125, 7, 7" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="371, 75, 69, 35" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="14, 114, 354, 188" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="23, 186, 374, 20" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="17, 139, 388, 24" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="13, 129, 410, 15" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="46, 444, 184, 33" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="45, 277, 345, 23" />
+                            <uc:CvElementInfo Category="InputBox" Region="44, 395, 225, 36" />
+                            <uc:CvElementInfo Category="ArrowButton" Region="239, 401, 19, 23" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
+                            <uc:OcrTextInfo Region="21, 16, 145, 16" Text="acme-test.uipath.com" />
+                            <uc:OcrTextInfo Region="167, 19, 31, 14" Text="says" />
+                            <uc:OcrTextInfo Region="20, 45, 35, 13" Text="Work" />
+                            <uc:OcrTextInfo Region="55, 46, 28, 12" Text="Item" />
+                            <uc:OcrTextInfo Region="84, 47, 25, 11" Text="was" />
+                            <uc:OcrTextInfo Region="110, 45, 49, 16" Text="updated" />
+                            <uc:OcrTextInfo Region="161, 44, 69, 17" Text="accordingly" />
+                            <uc:OcrTextInfo Region="396, 86, 20, 14" Text="OK" />
+                            <uc:OcrTextInfo Region="50, 124, 54, 12" Text="epuere" />
+                            <uc:OcrTextInfo Region="43, 149, 38, 14" Text="WIID:" />
+                            <uc:OcrTextInfo Region="84, 149, 64, 14" Text="83830208" />
+                            <uc:OcrTextInfo Region="44, 169, 39, 17" Text="Type:" />
+                            <uc:OcrTextInfo Region="84, 169, 61, 14" Text="Calculate" />
+                            <uc:OcrTextInfo Region="146, 169, 40, 15" Text="Client" />
+                            <uc:OcrTextInfo Region="187, 169, 52, 17" Text="Security" />
+                            <uc:OcrTextInfo Region="241, 169, 34, 14" Text="Hash" />
+                            <uc:OcrTextInfo Region="45, 189, 49, 15" Text="Status:" />
+                            <uc:OcrTextInfo Region="96, 190, 36, 16" Text="Open" />
+                            <uc:OcrTextInfo Region="43, 208, 38, 16" Text="Date:" />
+                            <uc:OcrTextInfo Region="84, 209, 73, 14" Text="2020-08-18" />
+                            <uc:OcrTextInfo Region="44, 229, 79, 15" Text="Comments:" />
+                            <uc:OcrTextInfo Region="43, 248, 307, 16" Text="I86e038d31426c17784799b602bbc18b202efa8d" />
+                            <uc:OcrTextInfo Region="44, 279, 30, 14" Text="Add" />
+                            <uc:OcrTextInfo Region="75, 279, 80, 14" Text="Comments:" />
+                            <uc:OcrTextInfo Region="63, 311, 301, 14" Text="86e038d31426c17784799b602bbc18b202efa8d" />
+                            <uc:OcrTextInfo Region="44, 374, 32, 13" Text="New" />
+                            <uc:OcrTextInfo Region="78, 374, 49, 13" Text="Status:" />
+                            <uc:OcrTextInfo Region="57, 404, 70, 18" Text="Completed" />
+                            <uc:OcrTextInfo Region="75, 454, 48, 17" Text="Update" />
+                            <uc:OcrTextInfo Region="124, 454, 35, 14" Text="Work" />
+                            <uc:OcrTextInfo Region="161, 454, 29, 14" Text="Item" />
+                            <uc:OcrTextInfo Region="14, 588, 63, 11" Text="Convrinht" />
+                            <uc:OcrTextInfo Region="77, 589, 13, 10" Text="(" />
+                            <uc:OcrTextInfo Region="90, 588, 34, 11" Text="9092" />
+                            <uc:OcrTextInfo Region="126, 589, 42, 10" Text="ACME" />
+                            <uc:OcrTextInfo Region="170, 588, 57, 11" Text="Svetamc" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" Endpoint="https://cv-2021-06-uatautomation.services.e5.ai/" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_3" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b4062198-958f-4390-be51-740e8871fbb3" InformativeScreenshot="631a48d9e858dce4201c684bf01cf685" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Google Chrome' /&gt;&lt;wnd cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>

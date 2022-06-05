@@ -1,27 +1,27 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="SHAGetHashCode" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_WIID" Type="InArgument(x:String)" />
-    <x:Property Name="in_ClientID" Type="InArgument(uc:CvString)" />
-    <x:Property Name="in_ClientName" Type="InArgument(uc:CvString)" />
-    <x:Property Name="in_ClientCountry" Type="InArgument(uc:CvString)" />
+    <x:Property Name="in_ClientID" Type="InArgument(x:String)" />
+    <x:Property Name="in_ClientName" Type="InArgument(x:String)" />
+    <x:Property Name="in_ClientCountry" Type="InArgument(x:String)" />
     <x:Property Name="out_SecurityHash" Type="OutArgument(x:String)" />
   </x:Members>
   <this:SHAGetHashCode.in_WIID>
     <InArgument x:TypeArguments="x:String" />
   </this:SHAGetHashCode.in_WIID>
   <this:SHAGetHashCode.in_ClientID>
-    <InArgument x:TypeArguments="uc:CvString" />
+    <InArgument x:TypeArguments="x:String" />
   </this:SHAGetHashCode.in_ClientID>
   <this:SHAGetHashCode.in_ClientName>
-    <InArgument x:TypeArguments="uc:CvString" />
+    <InArgument x:TypeArguments="x:String" />
   </this:SHAGetHashCode.in_ClientName>
   <this:SHAGetHashCode.in_ClientCountry>
-    <InArgument x:TypeArguments="uc:CvString" />
+    <InArgument x:TypeArguments="x:String" />
   </this:SHAGetHashCode.in_ClientCountry>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1338,1496</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1155,1629</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SHAGetHashCode_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,6 +58,7 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -86,7 +87,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
@@ -98,26 +98,26 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SHAGetHashCode" sap:VirtualizedContainerService.HintSize="552,1431" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SHAGetHashCode" sap:VirtualizedContainerService.HintSize="552,1564" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Getting hash code for &quot;+in_WIID]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  SHA1 online'" sap:VirtualizedContainerService.HintSize="510,1208" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="261faaa6819bbb95070095b4e05902b1" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  SHA1 online'" sap:VirtualizedContainerService.HintSize="510,1341" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="261faaa6819bbb95070095b4e05902b1" Selector="&lt;html app='chrome.exe' title='SHA1 online' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Get hash code" sap:VirtualizedContainerService.HintSize="476,1062" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Get hash code" sap:VirtualizedContainerService.HintSize="476,1195" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DisplayName="CV Screen Scope 'DIV  sha1-title'" sap:VirtualizedContainerService.HintSize="434,930" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V5">
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DisplayName="CV Screen Scope 'DIV  sha1-title'" sap:VirtualizedContainerService.HintSize="434,1103" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V5">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -129,7 +129,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (283,80,335,22)&quot; +&#xD;&#xA;&quot;Anchor: Text 'SHA1 and other hash functions online generator' (164,34,623,27)&quot;]" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="705163feaca23e5243b2317017af150d" Text="[in_ClientID.PlainText.ToString+&quot;-&quot;+in_ClientName.PlainText.ToString+&quot;-&quot;+in_ClientCountry.PlainText.ToString]" Version="V5">
+                    <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (283,80,335,22)&quot; +&#xA;&quot;Anchor: Text 'SHA1 and other hash functions online generator' (164,34,623,27)&quot;]" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,184" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="705163feaca23e5243b2317017af150d" Text="[in_ClientID+&quot;-&quot;+in_ClientName+&quot;-&quot;+in_ClientCountry]" Version="V5">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="6bee61c8-b4ac-4556-bb17-5d5106778c99">
                           <uc:CvDescriptor.Anchors>
@@ -153,7 +153,7 @@
                         </ui:Target>
                       </p:CvTypeIntoWithDescriptor.Target>
                     </p:CvTypeIntoWithDescriptor>
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'hash' (625,83,34,14)&quot; +&#xD;&#xA;&quot;Anchor: Button (618,80,48,22)&quot;]" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="9fba562bcdf2807403853ac239d41285" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'hash' (625,83,34,14)&quot; +&#xA;&quot;Anchor: Button (618,80,48,22)&quot;]" DesignTimeCacheId="90b945c3-b215-461a-912d-137b40dd0e68" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="9fba562bcdf2807403853ac239d41285" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V5">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -187,24 +187,38 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: AnyText (333,161,462,19)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Result for sha1:' (155,161,159,19)&quot;]" DesignTimeCacheId="77c854f8-29db-4993-95b0-f924355304c6" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="ab94f626899339544af75e1ce0d82eae" RefreshBefore="True" Result="[out_SecurityHash]" Version="V5">
-                      <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
-                        <uc:CvDescriptor Id="f7e28c87-746c-4df8-b9e2-de1b1067a2fb">
-                          <uc:CvDescriptor.Anchors>
-                            <x:Array Type="uc:CvElementDescriptor">
-                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="155, 161, 159, 19" ElementType="Text" Text="Result for sha1:" />
-                            </x:Array>
-                          </uc:CvDescriptor.Anchors>
-                          <uc:CvDescriptor.Target>
-                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="333, 161, 462, 19" ElementType="AnyText" />
-                          </uc:CvDescriptor.Target>
-                        </uc:CvDescriptor>
-                      </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
-                    </p:CvGetTextWithDescriptor>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="400,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[out_SecurityHash]" />
+                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="400,340" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:02">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: Text 'SHA1 and other hash functions online generator' (164,34,623,27) Offset: (-31,119,692,37)&quot;]" DesignTimeCacheId="77c854f8-29db-4993-95b0-f924355304c6" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Text" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_2" InformativeScreenshot="cb91c0a6d5dfdc1db7f57253e87d4944" RefreshBefore="True" Result="[out_SecurityHash]" Version="V5">
+                            <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                              <uc:CvDescriptor Id="6f3ecd92-ca15-4dfe-a175-311050238a43" TargetOffset="-31, 119, 692, 37">
+                                <uc:CvDescriptor.Target>
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="164, 34, 623, 27" ElementType="Text" Text="SHA1 and other hash functions online generator" />
+                                </uc:CvDescriptor.Target>
+                              </uc:CvDescriptor>
+                            </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                          </p:CvGetTextWithDescriptor>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                      </ui:RetryScope.Condition>
+                    </ui:RetryScope>
+                    <Assign sap:VirtualizedContainerService.HintSize="400,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[out_SecurityHash]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(out_SecurityHash.ToString, "(?&lt;=Result for sha1:).*").Value]</InArgument>
+                      </Assign.Value>
+                    </Assign>
                   </Sequence>
                 </ActivityAction>
               </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+              </p:CVScope.DesignTimeCache>
               <p:CVScope.DesignTimeCacheContainer>
                 <uc:CvCacheContainer>
                   <uc:CvCacheContainer.Caches>
@@ -265,88 +279,6 @@
                             <uc:OcrTextInfo Region="406, 368, 66, 18" Text="SPAIN" />
                             <uc:OcrTextInfo Region="475, 368, 39, 19" Text="and" />
                             <uc:OcrTextInfo Region="518, 368, 112, 21" Text="oldpics.org" />
-                          </scg:List>
-                        </uc:CVCache.OcrTexts>
-                      </uc:CVCache>
-                      <uc:CVCache DisplayName="Result SHA Screen" Id="77c854f8-29db-4993-95b0-f924355304c6" InformativeScreenshot="d91fe34bfc23d4b918fa45db7ecc6de2" LogicalPosition="484, 171" OcrText="Home Page SHA1 in JAVA Secure password generator I Linux SHA1 and other hash functions online generator XCXZ hash sha-1 v Result for sha1: 1c8e35ccc3b8a6636017f2fd53a17900197f2dc SHA-1 MD5 on Wikipedia We love SPAIN and oldpics.org Dating.com OPEN dating.com The Dating Site You're Seeking X" Position="484, 171">
-                        <uc:CVCache.CvAnchorRelations>
-                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
-                        </uc:CVCache.CvAnchorRelations>
-                        <uc:CVCache.CvUiElements>
-                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
-                            <uc:CvElementInfo Category="Button" Region="694, 469, 132, 43" />
-                            <uc:CvElementInfo Category="InputBox" Region="286, 80, 343, 23" />
-                            <uc:CvElementInfo Category="Icon" Region="157, 471, 26, 24" />
-                            <uc:CvElementInfo Category="Button" Region="618, 80, 49, 23" />
-                            <uc:CvElementInfo Category="Icon" Region="111, 504, 17, 15" />
-                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="351, 281, 66, 25" />
-                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="112, 519, 16, 16" />
-                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="418, 281, 50, 25" />
-                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="111, 503, 17, 16" />
-                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="110, 520, 18, 18" />
-                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="428, 123, 95, 21" />
-                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="316, 159, 517, 25" />
-                            <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="420, 283, 45, 22" />
-                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="121, 454, 88, 71" />
-                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="326, 404, 150, 26" />
-                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="353, 281, 66, 23" />
-                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="420, 283, 44, 21" />
-                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="421, 285, 23, 18" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="123, 441, 649, 90" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="304, 402, 549, 42" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="691, 466, 133, 48" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="321, 403, 137, 24" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="317, 442, 219, 93" />
-                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="111, 455, 96, 21" />
-                            <uc:CvElementInfo Category="InputBox" Region="430, 123, 91, 21" />
-                            <uc:CvElementInfo Category="ArrowButton" Region="502, 124, 19, 19" />
-                          </scg:List>
-                        </uc:CVCache.CvUiElements>
-                        <uc:CVCache.OcrTexts>
-                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
-                            <uc:OcrTextInfo Region="220, 2, 47, 13" Text="Home" />
-                            <uc:OcrTextInfo Region="270, 1, 41, 17" Text="Page" />
-                            <uc:OcrTextInfo Region="327, 1, 43, 14" Text="SHA1" />
-                            <uc:OcrTextInfo Region="373, 1, 17, 14" Text="in" />
-                            <uc:OcrTextInfo Region="393, 1, 43, 14" Text="JAVA" />
-                            <uc:OcrTextInfo Region="451, 1, 57, 14" Text="Secure" />
-                            <uc:OcrTextInfo Region="510, 2, 78, 15" Text="password" />
-                            <uc:OcrTextInfo Region="590, 1, 81, 17" Text="generator" />
-                            <uc:OcrTextInfo Region="675, 1, 7, 17" Text="I" />
-                            <uc:OcrTextInfo Region="687, 0, 45, 15" Text="Linux" />
-                            <uc:OcrTextInfo Region="164, 35, 72, 22" Text="SHA1" />
-                            <uc:OcrTextInfo Region="242, 34, 49, 23" Text="and" />
-                            <uc:OcrTextInfo Region="298, 35, 70, 21" Text="other" />
-                            <uc:OcrTextInfo Region="375, 34, 63, 23" Text="hash" />
-                            <uc:OcrTextInfo Region="443, 35, 122, 22" Text="functions" />
-                            <uc:OcrTextInfo Region="572, 35, 79, 21" Text="online" />
-                            <uc:OcrTextInfo Region="658, 36, 129, 25" Text="generator" />
-                            <uc:OcrTextInfo Region="288, 86, 32, 11" Text="XCXZ" />
-                            <uc:OcrTextInfo Region="625, 83, 34, 14" Text="hash" />
-                            <uc:OcrTextInfo Region="434, 126, 35, 14" Text="sha-1" />
-                            <uc:OcrTextInfo Region="504, 127, 13, 11" Text="v" />
-                            <uc:OcrTextInfo Region="155, 161, 65, 19" Text="Result" />
-                            <uc:OcrTextInfo Region="223, 162, 31, 17" Text="for" />
-                            <uc:OcrTextInfo Region="257, 161, 57, 19" Text="sha1:" />
-                            <uc:OcrTextInfo Region="333, 161, 462, 19" Text="1c8e35ccc3b8a6636017f2fd53a17900197f2dc" />
-                            <uc:OcrTextInfo Region="352, 284, 63, 19" Text="SHA-1" />
-                            <uc:OcrTextInfo Region="421, 284, 44, 18" Text="MD5" />
-                            <uc:OcrTextInfo Region="470, 288, 25, 14" Text="on" />
-                            <uc:OcrTextInfo Region="500, 284, 100, 22" Text="Wikipedia" />
-                            <uc:OcrTextInfo Region="322, 408, 33, 17" Text="We" />
-                            <uc:OcrTextInfo Region="360, 407, 43, 18" Text="love" />
-                            <uc:OcrTextInfo Region="406, 407, 66, 18" Text="SPAIN" />
-                            <uc:OcrTextInfo Region="476, 408, 38, 18" Text="and" />
-                            <uc:OcrTextInfo Region="519, 407, 110, 22" Text="oldpics.org" />
-                            <uc:OcrTextInfo Region="228, 463, 81, 19" Text="Dating.com" />
-                            <uc:OcrTextInfo Region="730, 478, 58, 21" Text="OPEN" />
-                            <uc:OcrTextInfo Region="136, 493, 61, 15" Text="dating.com" />
-                            <uc:OcrTextInfo Region="227, 486, 54, 26" Text="The" />
-                            <uc:OcrTextInfo Region="288, 486, 93, 33" Text="Dating" />
-                            <uc:OcrTextInfo Region="387, 486, 55, 27" Text="Site" />
-                            <uc:OcrTextInfo Region="447, 486, 87, 26" Text="You're" />
-                            <uc:OcrTextInfo Region="539, 486, 112, 33" Text="Seeking" />
-                            <uc:OcrTextInfo Region="112, 520, 14, 13" Text="X" />
                           </scg:List>
                         </uc:CVCache.OcrTexts>
                       </uc:CVCache>
